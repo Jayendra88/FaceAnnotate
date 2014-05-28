@@ -52,6 +52,8 @@ namespace faceAnnotate
             API faceApi = new API();
             List<Person> persons = faceApi.getFileLocations(fileNames);
 
+            //anotate images
+            // show annotated images in the ui
 
             StartAnnotateBtn.IsEnabled = false;
             SaveBtn.IsEnabled = true;
