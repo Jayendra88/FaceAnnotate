@@ -1,0 +1,16 @@
+D:\Dev\Chathura\faceAnnotate\faceAnnotate\bin\Debug\faceAnnotate.exe.config
+D:\Dev\Chathura\faceAnnotate\faceAnnotate\bin\Debug\faceAnnotate.exe
+D:\Dev\Chathura\faceAnnotate\faceAnnotate\bin\Debug\faceAnnotate.pdb
+D:\Dev\Chathura\faceAnnotate\faceAnnotate\obj\Debug\faceAnnotate.csprojResolveAssemblyReference.cache
+D:\Dev\Chathura\faceAnnotate\faceAnnotate\obj\Debug\MainWindow.baml
+D:\Dev\Chathura\faceAnnotate\faceAnnotate\obj\Debug\MainWindow.g.cs
+D:\Dev\Chathura\faceAnnotate\faceAnnotate\obj\Debug\App.g.cs
+D:\Dev\Chathura\faceAnnotate\faceAnnotate\obj\Debug\faceAnnotate_MarkupCompile.cache
+D:\Dev\Chathura\faceAnnotate\faceAnnotate\obj\Debug\faceAnnotate.g.resources
+D:\Dev\Chathura\faceAnnotate\faceAnnotate\obj\Debug\faceAnnotate.Properties.Resources.resources
+D:\Dev\Chathura\faceAnnotate\faceAnnotate\obj\Debug\faceAnnotate.csproj.GenerateResource.Cache
+D:\Dev\Chathura\faceAnnotate\faceAnnotate\obj\Debug\faceAnnotate.exe
+D:\Dev\Chathura\faceAnnotate\faceAnnotate\obj\Debug\faceAnnotate.pdb
+C:\Users\jayendra\Desktop\faceAnnotate\faceAnnotate\faceAnnotate\bin\Debug\faceAnnotate.exe.config
+C:\Users\jayendra\Desktop\faceAnnotate\faceAnnotate\faceAnnotate\obj\Debug\faceAnnotate.exe
+C:\Users\jayendra\Desktop\faceAnnotate\faceAnnotate\faceAnnotate\obj\Debug\faceAnnotate.pdb
