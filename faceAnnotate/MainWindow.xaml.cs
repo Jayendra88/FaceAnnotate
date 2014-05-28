@@ -52,11 +52,17 @@ namespace faceAnnotate
             API faceApi = new API();
             List<Person> persons = faceApi.getFileLocations(fileNames);
 
+
+            StartAnnotateBtn.IsEnabled = false;
+            SaveBtn.IsEnabled = true;
         }
 
         private void Save(object sender, RoutedEventArgs e)
         {
             //save to xl file
+
+            SaveBtn.IsEnabled = false;
+            BrowseImagesBtn.IsEnabled = true;
         }
 
     }
