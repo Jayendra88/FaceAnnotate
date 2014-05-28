@@ -3,6 +3,29 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="90*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="1" Background="LightBlue">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="30*"/>
+                <ColumnDefinition Width="70*"/>
+            </Grid.ColumnDefinitions>
+            <ListView Grid.Column="0" Margin="2"></ListView>
+            <Grid Margin="2">
+                <Image></Image>
+            </Grid>
+        </Grid>
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Button x:Name="BrowseImagesBtn" Grid.Column="0" Content="Browse Input Images" Click="GetInputPath"/>
+            <Button x:Name="StartAnnotateBtn" Grid.Column="1" Content="Annotate Faces" IsEnabled="False" Click="StartAnnotate"/>
+            <Button x:Name="SaveBtn" Grid.Column="2" Content="Save" IsEnabled="False" Click="Save"/>
+        </Grid>
     </Grid>
 </Window>

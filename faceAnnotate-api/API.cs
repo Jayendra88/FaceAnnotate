@@ -11,10 +11,10 @@ namespace faceAnnotate_api
 {
     public class API
     {
-        public List<Person> getFileLocations(string imageFolderLocation) 
+        public List<Person> getFileLocations(string[] filePaths) 
         {
             List<Person> List = new List<Person>();
-            string[] filePaths = Directory.GetFiles(imageFolderLocation);
+            //string[] filePaths = Directory.GetFiles(imageFolderLocation);
             foreach (var item in filePaths)
             {
                 List.Add(new Person() { FileLocation = item });

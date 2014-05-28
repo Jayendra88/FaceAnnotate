@@ -4,3 +4,8 @@ D:\Dev\Chathura\faceAnnotate\faceAnnotate-api\bin\Debug\faceAnnotate-api.pdb
 D:\Dev\Chathura\faceAnnotate\faceAnnotate-api\bin\Debug\FaceSDK.NET.dll
 D:\Dev\Chathura\faceAnnotate\faceAnnotate-api\obj\Debug\faceAnnotate-api.dll
 D:\Dev\Chathura\faceAnnotate\faceAnnotate-api\obj\Debug\faceAnnotate-api.pdb
+D:\Jayendra\Projects\FaceAnnotate\faceAnnotate-api\bin\Debug\faceAnnotate-api.dll
+D:\Jayendra\Projects\FaceAnnotate\faceAnnotate-api\bin\Debug\faceAnnotate-api.pdb
+D:\Jayendra\Projects\FaceAnnotate\faceAnnotate-api\obj\Debug\faceAnnotate-api.csprojResolveAssemblyReference.cache
+D:\Jayendra\Projects\FaceAnnotate\faceAnnotate-api\obj\Debug\faceAnnotate-api.dll
+D:\Jayendra\Projects\FaceAnnotate\faceAnnotate-api\obj\Debug\faceAnnotate-api.pdb
