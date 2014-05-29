@@ -55,6 +55,12 @@ namespace faceAnnotate
             //anotate images
             // show annotated images in the ui
 
+            foreach (var person in persons)
+            {
+                //person.Image = System.Drawing.Image //{ Source = new BitmapImage() { UriSource = new Uri(person.FileLocation, UriKind.Absolute) } };
+                faceApi.annotateFace(person);
+            }
+
             StartAnnotateBtn.IsEnabled = false;
             SaveBtn.IsEnabled = true;
         }

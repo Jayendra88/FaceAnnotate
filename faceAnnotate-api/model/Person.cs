@@ -31,10 +31,14 @@ namespace faceAnnotate_api.model
         public String FileLocation
         {
             get { return fileLocation; }
-            set { fileLocation = value; }
+            set 
+            { 
+                fileLocation = value;
+                image = System.Drawing.Image.FromFile(FileLocation); 
+            }
         }
         private Image image;
-
+        
         public Image Image
         {
             get { return image; }
