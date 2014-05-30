@@ -15,3 +15,4 @@ D:\My Work\Git\FaceAnnotate\faceAnnotate-api\bin\Debug\DocumentFormat.OpenXml.dl
 D:\My Work\Git\FaceAnnotate\faceAnnotate-api\obj\Debug\faceAnnotate-api.csprojResolveAssemblyReference.cache
 D:\My Work\Git\FaceAnnotate\faceAnnotate-api\obj\Debug\faceAnnotate-api.dll
 D:\My Work\Git\FaceAnnotate\faceAnnotate-api\obj\Debug\faceAnnotate-api.pdb
+D:\Jayendra\Projects\FaceAnnotate\faceAnnotate-api\bin\Debug\FaceSDK.NET.dll

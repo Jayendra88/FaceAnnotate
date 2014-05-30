@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using faceAnnotate_api.model;
 using System.IO;
 using System.Drawing;
+using System.Data;
 
 namespace faceAnnotate_api
 {
@@ -24,6 +25,7 @@ namespace faceAnnotate_api
 
         public Person annotateFace(Person person) 
         {
+            FeatureTracker ft = new FeatureTracker();
             List<ImagePoint> imagePointList = FeatureTracker.GetFeaturePoints(person.Image);
             // annotate and drwa and keep the new image in property person.annotatedFace
             //person.AnnotatedFace = 
@@ -39,6 +41,22 @@ namespace faceAnnotate_api
         public void logToTextFile(Person person) 
         {
             //person.importantImagePointList is logged to a file 
+        }
+
+        public void ExportToXL(List<Person> persons, string filePath) 
+        {
+
+            DataSet ds = XLFileWriter.CreateSampleData(persons);
+
+            try
+            {
+                XLFileWriter.CreateExcelDocument(ds, filePath);
+            }
+            catch (Exception ex)
+            {
+                //MessageBox.Show("Couldn't create Excel file.\r\nException: " + ex.Message);
+                return;
+            }
         }
     }
 }

@@ -48,3 +48,4 @@ D:\My Work\Git\FaceAnnotate\faceAnnotate\obj\Debug\faceAnnotate_MarkupCompile.ca
 D:\My Work\Git\FaceAnnotate\faceAnnotate\obj\Debug\faceAnnotate.g.resources
 D:\My Work\Git\FaceAnnotate\faceAnnotate\obj\Debug\faceAnnotate.Properties.Resources.resources
 D:\My Work\Git\FaceAnnotate\faceAnnotate\obj\Debug\faceAnnotate.csproj.GenerateResource.Cache
+D:\Jayendra\Projects\FaceAnnotate\faceAnnotate\bin\Debug\DocumentFormat.OpenXml.dll

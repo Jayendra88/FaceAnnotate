@@ -1,6 +1,7 @@
 ﻿using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Spreadsheet;
+using faceAnnotate_api.model;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -177,61 +178,34 @@ namespace faceAnnotate_api
             return string.Format("{0}{1}", firstChar, secondChar);
         }
 
-        public static DataSet CreateSampleData()
+        public static DataSet CreateSampleData(List<Person> persons)
         {
-            //  Create a sample DataSet, containing three DataTables.
-            //  (Later, this will save to Excel as three Excel worksheets.)
-            //
+            int maxcols = persons.Max(x => x.ImportantImagePointList.Count) + 1;
+
             DataSet ds = new DataSet();
+            DataTable dt1 = new DataTable("Feature Points");
 
-            //  Create the first table of sample data
-            DataTable dt1 = new DataTable("Drivers");
-            dt1.Columns.Add("UserID", Type.GetType("System.Decimal"));
-            dt1.Columns.Add("Surname", Type.GetType("System.String"));
-            dt1.Columns.Add("Forename", Type.GetType("System.String"));
-            dt1.Columns.Add("Sex", Type.GetType("System.String"));
-            dt1.Columns.Add("Date of Birth", Type.GetType("System.DateTime"));
+            dt1.Columns.Add("Image Name", Type.GetType("System.String"));
+            for (int i = 0; i < maxcols; i++) 
+            {
+                dt1.Columns.Add("point " + i+1, Type.GetType("System.String"));
+            }
 
-            dt1.Rows.Add(new object[] { 1, "James", "Brown", "M", new DateTime(1962,3,19) });
-            dt1.Rows.Add(new object[] { 2, "Edward", "Jones", "M", new DateTime(1939,7,12) });
-            dt1.Rows.Add(new object[] { 3, "Janet", "Spender", "F", new DateTime(1996,1,7) });
-            dt1.Rows.Add(new object[] { 4, "Maria", "Percy", "F", new DateTime(1991,10,24) });
-            dt1.Rows.Add(new object[] { 5, "Malcolm", "Marvelous", "M", new DateTime(1973,5,7) });
+            foreach (var person in persons)
+            {
+                var ob = new object[maxcols];
+                ob[0] = System.IO.Path.GetFileName(person.FileLocation); 
+                for (int i = 1; i < maxcols; i++)
+                {
+                    if ((i-1) < person.ImportantImagePointList.Count)
+                        ob[i] = "(" + person.ImportantImagePointList[i - 1].X.ToString() + "," + person.ImportantImagePointList[i - 1].Y.ToString() + ")";
+                    else ob[i] = "";
+                }
+                dt1.Rows.Add(ob);
+            }
+
             ds.Tables.Add(dt1);
-
-
-            //  Create the second table of sample data
-            DataTable dt2 = new DataTable("Vehicles");
-            dt2.Columns.Add("Vehicle ID", Type.GetType("System.Decimal"));
-            dt2.Columns.Add("Make", Type.GetType("System.String"));
-            dt2.Columns.Add("Model", Type.GetType("System.String"));
-
-            dt2.Rows.Add(new object[] { 1001, "Ford", "Banana" });
-            dt2.Rows.Add(new object[] { 1002, "GM", "Thunderbird" });
-            dt2.Rows.Add(new object[] { 1003, "Porsche", "Rocket" });
-            dt2.Rows.Add(new object[] { 1004, "Toyota", "Gas guzzler" });
-            dt2.Rows.Add(new object[] { 1005, "Fiat", "Spangly" });
-            dt2.Rows.Add(new object[] { 1006, "Peugeot", "Lawnmower" });
-            dt2.Rows.Add(new object[] { 1007, "Jaguar", "Freeloader" });
-            dt2.Rows.Add(new object[] { 1008, "Aston Martin", "Caravanette" });
-            dt2.Rows.Add(new object[] { 1009, "Mercedes-Benz", "Hitchhiker" });
-            dt2.Rows.Add(new object[] { 1010, "Renault", "Sausage" });
-            dt2.Rows.Add(new object[] { 1011, "Saab", "Chickennuggetmobile" });
-            ds.Tables.Add(dt2);
-
-
-            //  Create the third table of sample data
-            DataTable dt3 = new DataTable("Vehicle owners");
-            dt3.Columns.Add("User ID", Type.GetType("System.Decimal"));
-            dt3.Columns.Add("Vehicle_ID", Type.GetType("System.Decimal"));
-
-            dt3.Rows.Add(new object[] { 1, 1002 });
-            dt3.Rows.Add(new object[] { 2, 1000 });
-            dt3.Rows.Add(new object[] { 3, 1010 });
-            dt3.Rows.Add(new object[] { 5, 1006 });
-            dt3.Rows.Add(new object[] { 6, 1007 });
-            ds.Tables.Add(dt3);
-
+            
             return ds;
         }
     }

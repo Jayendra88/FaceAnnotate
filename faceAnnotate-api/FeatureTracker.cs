@@ -21,7 +21,7 @@ namespace faceAnnotate_api
         public FeatureTracker()
         {
 
-            FSDK.ActivateLibrary("aTNQlrb9dEiYDYz/SpNbtASWMYKUtKGfBvyP6BVgKLhfOYCCj1GYS5CnrKUoFkhLAQrbT+JW8veY+NOYXXRV+vV8bNLKiBySt/f2tp0+ATVuQcrm/emDS8KXZN75oO3iQv1rWVpF4mP6eFEIROuqU8ZvW9QyfL8/D9Mf/E6urkc=");
+            FSDK.ActivateLibrary("gE5+GnKUPq5jLgbfQGTGuWWO3hVg01T2Lmlp0OBcTzVdDA9PnvT2Xxm/4tK5LUVB9jncWoqzZ8xPRgebg81xSCNonF+QULKRrg9XnwxOguy2TLhbROs6QJk+/nO6DvcctMjdya8NhARzv9hPQGOQ62Z0wSxncrq5dL2DfB8kbi8=");
             FSDK.InitializeLibrary();
             FSDK.SetFaceDetectionParameters(true, true, 336);
 

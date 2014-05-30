@@ -20,12 +20,12 @@
         <Grid Grid.Row="0">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition />
-                <ColumnDefinition />
+                <ColumnDefinition Width="0"/>
                 <ColumnDefinition />
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
             <Button x:Name="BrowseImagesBtn" Grid.Column="0" Content="Browse Input Images" Click="GetInputPath"/>
-            <Button x:Name="BrowseOutputLocationBtn" Grid.Column="1" IsEnabled="False" Content="Browse Output Location" Click="GetOutputPath"/>
+            <!--<Button x:Name="BrowseOutputLocationBtn" Grid.Column="1" IsEnabled="False" Content="Browse Output Location" Click="GetOutputPath"/>-->
             <Button x:Name="StartAnnotateBtn" Grid.Column="2" Content="Annotate Faces" IsEnabled="False" Click="StartAnnotate"/>
             <Button x:Name="ExportXL" Grid.Column="3" Content="Export To XL" IsEnabled="True" Click="ExportToXL"/>
         </Grid>
