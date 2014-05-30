@@ -33,7 +33,6 @@ namespace faceAnnotate
 
         private void GetInputPath(object sender, RoutedEventArgs e)
         {
-            
             Microsoft.Win32.OpenFileDialog dlg = new Microsoft.Win32.OpenFileDialog();
             dlg.Multiselect = true;
             dlg.DefaultExt = ".jpg";
@@ -50,7 +49,13 @@ namespace faceAnnotate
 
         private void GetOutputPath(object sender, RoutedEventArgs e)
         {
+            Gat.Controls.OpenDialogView openDialog = new Gat.Controls.OpenDialogView();
+            Gat.Controls.OpenDialogViewModel vm = (Gat.Controls.OpenDialogViewModel)openDialog.DataContext;
+            vm.IsDirectoryChooser = true;
+            bool? result = vm.Show();
 
+            if (result != true) return;
+            outputPath = vm.SelectedFilePath;
 
             StartAnnotateBtn.IsEnabled = true;
             BrowseOutputLocationBtn.IsEnabled = false;
@@ -82,6 +87,7 @@ namespace faceAnnotate
             dlg.FileName = "Annotated Faces"; // Default file name
             dlg.DefaultExt = ".xlsx"; // Default file extension
             dlg.Filter = "Microsoft XL Document (.xlsx)|*.xlsx"; // Filter files by extension 
+            //dlg.
 
             // Show open file dialog box
             Nullable<bool> result = dlg.ShowDialog();
