@@ -9,3 +9,9 @@ D:\Jayendra\Projects\FaceAnnotate\faceAnnotate-api\bin\Debug\faceAnnotate-api.pd
 D:\Jayendra\Projects\FaceAnnotate\faceAnnotate-api\obj\Debug\faceAnnotate-api.csprojResolveAssemblyReference.cache
 D:\Jayendra\Projects\FaceAnnotate\faceAnnotate-api\obj\Debug\faceAnnotate-api.dll
 D:\Jayendra\Projects\FaceAnnotate\faceAnnotate-api\obj\Debug\faceAnnotate-api.pdb
+D:\My Work\Git\FaceAnnotate\faceAnnotate-api\bin\Debug\faceAnnotate-api.dll
+D:\My Work\Git\FaceAnnotate\faceAnnotate-api\bin\Debug\faceAnnotate-api.pdb
+D:\My Work\Git\FaceAnnotate\faceAnnotate-api\bin\Debug\DocumentFormat.OpenXml.dll
+D:\My Work\Git\FaceAnnotate\faceAnnotate-api\obj\Debug\faceAnnotate-api.csprojResolveAssemblyReference.cache
+D:\My Work\Git\FaceAnnotate\faceAnnotate-api\obj\Debug\faceAnnotate-api.dll
+D:\My Work\Git\FaceAnnotate\faceAnnotate-api\obj\Debug\faceAnnotate-api.pdb

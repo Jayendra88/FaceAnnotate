@@ -31,3 +31,20 @@ D:\Jayendra\Projects\FaceAnnotate\faceAnnotate\obj\Debug\faceAnnotate.g.resource
 D:\Jayendra\Projects\FaceAnnotate\faceAnnotate\obj\Debug\faceAnnotate.Properties.Resources.resources
 D:\Jayendra\Projects\FaceAnnotate\faceAnnotate\obj\Debug\faceAnnotate.csproj.GenerateResource.Cache
 D:\Jayendra\Projects\FaceAnnotate\faceAnnotate\bin\Debug\Gat.Controls.OpenDialog.dll
+D:\My Work\Git\FaceAnnotate\faceAnnotate\bin\Debug\faceAnnotate.exe.config
+D:\My Work\Git\FaceAnnotate\faceAnnotate\obj\Debug\faceAnnotate.exe
+D:\My Work\Git\FaceAnnotate\faceAnnotate\obj\Debug\faceAnnotate.pdb
+D:\My Work\Git\FaceAnnotate\faceAnnotate\bin\Debug\faceAnnotate.exe
+D:\My Work\Git\FaceAnnotate\faceAnnotate\bin\Debug\faceAnnotate.pdb
+D:\My Work\Git\FaceAnnotate\faceAnnotate\bin\Debug\faceAnnotate-api.dll
+D:\My Work\Git\FaceAnnotate\faceAnnotate\bin\Debug\DocumentFormat.OpenXml.dll
+D:\My Work\Git\FaceAnnotate\faceAnnotate\bin\Debug\FaceSDK.NET.dll
+D:\My Work\Git\FaceAnnotate\faceAnnotate\bin\Debug\faceAnnotate-api.pdb
+D:\My Work\Git\FaceAnnotate\faceAnnotate\obj\Debug\faceAnnotate.csprojResolveAssemblyReference.cache
+D:\My Work\Git\FaceAnnotate\faceAnnotate\obj\Debug\MainWindow.baml
+D:\My Work\Git\FaceAnnotate\faceAnnotate\obj\Debug\MainWindow.g.cs
+D:\My Work\Git\FaceAnnotate\faceAnnotate\obj\Debug\App.g.cs
+D:\My Work\Git\FaceAnnotate\faceAnnotate\obj\Debug\faceAnnotate_MarkupCompile.cache
+D:\My Work\Git\FaceAnnotate\faceAnnotate\obj\Debug\faceAnnotate.g.resources
+D:\My Work\Git\FaceAnnotate\faceAnnotate\obj\Debug\faceAnnotate.Properties.Resources.resources
+D:\My Work\Git\FaceAnnotate\faceAnnotate\obj\Debug\faceAnnotate.csproj.GenerateResource.Cache

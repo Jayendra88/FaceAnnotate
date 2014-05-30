@@ -2,6 +2,7 @@
 using faceAnnotate_api.model;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,6 +24,7 @@ namespace faceAnnotate
     public partial class MainWindow : Window
     {
         public static string[] fileNames;
+        public static string outputPath;
 
         public MainWindow()
         {
@@ -31,6 +33,7 @@ namespace faceAnnotate
 
         private void GetInputPath(object sender, RoutedEventArgs e)
         {
+            
             Microsoft.Win32.OpenFileDialog dlg = new Microsoft.Win32.OpenFileDialog();
             dlg.Multiselect = true;
             dlg.DefaultExt = ".jpg";
@@ -40,11 +43,18 @@ namespace faceAnnotate
 
             if (fileNames == null || fileNames.Length == 0) return;
 
-            StartAnnotateBtn.IsEnabled = true;
+            BrowseOutputLocationBtn.IsEnabled = true;
             BrowseImagesBtn.IsEnabled = false;
 
         }
 
+        private void GetOutputPath(object sender, RoutedEventArgs e)
+        {
+
+
+            StartAnnotateBtn.IsEnabled = true;
+            BrowseOutputLocationBtn.IsEnabled = false;
+        }
         private void StartAnnotate(object sender, RoutedEventArgs e)
         {
             if (fileNames == null || fileNames.Length == 0) return;
@@ -62,14 +72,41 @@ namespace faceAnnotate
             }
 
             StartAnnotateBtn.IsEnabled = false;
-            SaveBtn.IsEnabled = true;
+            ExportXL.IsEnabled = true;
         }
 
-        private void Save(object sender, RoutedEventArgs e)
-        {
-            //save to xl file
 
-            SaveBtn.IsEnabled = false;
+        private void ExportToXL(object sender, RoutedEventArgs e)
+        {
+            Microsoft.Win32.SaveFileDialog dlg = new Microsoft.Win32.SaveFileDialog();
+            dlg.FileName = "Annotated Faces"; // Default file name
+            dlg.DefaultExt = ".xlsx"; // Default file extension
+            dlg.Filter = "Microsoft XL Document (.xlsx)|*.xlsx"; // Filter files by extension 
+
+            // Show open file dialog box
+            Nullable<bool> result = dlg.ShowDialog();
+
+            // Process open file dialog box results 
+            if (result == true)
+            {
+                // Open document 
+                string filename = dlg.FileName;
+                DataSet ds = XLFileWriter.CreateSampleData();
+
+                try
+                {
+                    XLFileWriter.CreateExcelDocument(ds, filename);
+                }
+                catch (Exception ex)
+                {
+                    //MessageBox.Show("Couldn't create Excel file.\r\nException: " + ex.Message);
+                    return;
+                }
+            }
+
+            
+
+            ExportXL.IsEnabled = false;
             BrowseImagesBtn.IsEnabled = true;
         }
 
